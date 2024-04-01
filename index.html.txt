@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      data-href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap"
+    />
+    <title>C R E A T E</title>
+  </head>
+  <body>
+    <div class="widget">
+      <h5 class="version">v1.2</h5>
+      <div class="clock" id="clock"></div>
+    </div>
+
+    <div id="container">
+      <ul class="notCreatedText" id="notCreatedText"></ul>
+      <div class="statusIconContainer" id="statusIconContainer">
+        <img class="statusIcon" id="statusIcon" src="" alt="" />
+      </div>
+      <textarea
+        spellcheck="false"
+        id="linksTextarea"
+        placeholder="Вставьте ссылки здесь..."
+        rows="12"
+      ></textarea>
+      <div class="linkCount">
+        Количество вставленных ссылок: <span id="linkCount">0</span>
+      </div>
+      <button class="button createButtons" onclick="createButtons()">
+        Создать
+      </button>
+      <button id="clearButton" onclick="clearLinks()" title="Очистить ссылки">
+        <img id="trashIcon" src="./svg/trash.svg" alt="Мусорка" />
+      </button>
+      <button id="copyButton" onclick="copyText()" title="Копировать ссылки">
+        <img id="copyIcon" src="./svg/copy.svg" alt="Копировать" />
+      </button>
+      <button
+        id="updateButton"
+        onclick="refreshPage()"
+        title="Обновить страницу"
+      >
+        <img id="updateIcon" src="./svg/update.svg" alt="Обновить" />
+      </button>
+      <button id="themeToggle" onclick="toggleTheme()" title="Сменить тему">
+        <img id="themeIcon" src="./svg/light_theme.svg" alt="Сменить тему" />
+      </button>
+
+      <div id="copyNotification" class="notification_copy">
+        Текст скопирован!
+      </div>
+      <div id="clearNotification" class="notification_del">Текст очищен!</div>
+      <div id="createNotification" class="notification_create">Готово!</div>
+      <div id="buttonsContainer"></div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
